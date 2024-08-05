@@ -16,7 +16,7 @@
 3. Set the Google Cloud project and region and ensure the Google Kubernetes Engine API is enabled.
 
    ```sh
-   export PROJECT_ID=<PROJECT_ID>
+   export PROJECT_ID=devoteam-khawar
    export REGION=us-central1
    gcloud services enable container.googleapis.com \
      --project=${PROJECT_ID}
