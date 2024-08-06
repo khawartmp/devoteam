@@ -7,11 +7,9 @@
 2. Clone the latest major version.
 
    ```sh
-   git clone --depth 1 --branch v0 https://github.com/GoogleCloudPlatform/microservices-demo.git
-   cd microservices-demo/
+   git clone git@github.com:khawartmp/devoteam.git
+   cd devoteam/
    ```
-
-   The `--depth 1` argument skips downloading git history.
 
 3. Set the Google Cloud project and region and ensure the Google Kubernetes Engine API is enabled.
 
@@ -42,24 +40,6 @@
    kubectl get pods
    ```
 
-   After a few minutes, you should see the Pods in a `Running` state:
-
-   ```
-   NAME                                     READY   STATUS    RESTARTS   AGE
-   adservice-76bdd69666-ckc5j               1/1     Running   0          2m58s
-   cartservice-66d497c6b7-dp5jr             1/1     Running   0          2m59s
-   checkoutservice-666c784bd6-4jd22         1/1     Running   0          3m1s
-   currencyservice-5d5d496984-4jmd7         1/1     Running   0          2m59s
-   emailservice-667457d9d6-75jcq            1/1     Running   0          3m2s
-   frontend-6b8d69b9fb-wjqdg                1/1     Running   0          3m1s
-   loadgenerator-665b5cd444-gwqdq           1/1     Running   0          3m
-   paymentservice-68596d6dd6-bf6bv          1/1     Running   0          3m
-   productcatalogservice-557d474574-888kr   1/1     Running   0          3m
-   recommendationservice-69c56b74d4-7z8r5   1/1     Running   0          3m1s
-   redis-cart-5f59546cdd-5jnqf              1/1     Running   0          2m58s
-   shippingservice-6ccc89f8fd-v686r         1/1     Running   0          2m58s
-   ```
-
 7. Access the web frontend in a browser using the frontend's external IP.
 
    ```sh
@@ -73,12 +53,8 @@
 9. Once you are done with it, delete the GKE cluster.
 
    ```sh
-   gcloud container clusters delete online-boutique \
-     --project=${PROJECT_ID} --region=${REGION}
+   gcloud container clusters delete online-boutique --project=${PROJECT_ID} --region=${REGION}
    ```
-
-   Deleting the cluster may take a few minutes.
-
 ## Additional deployment options
 
 - **Terraform**: [See these instructions](/terraform) to learn how to deploy Online Boutique using [Terraform](https://www.terraform.io/intro).

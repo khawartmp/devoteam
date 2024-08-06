@@ -1,0 +1,10 @@
+title: "K8sClusterViewer"
+description: "Read-only access to Kubernetes cluster"
+stage: "GA"
+includedPermissions:
+- container.clusters.get
+- container.clusters.list
+- container.pods.get
+- container.pods.list
+- container.services.get
+- container.services.list
