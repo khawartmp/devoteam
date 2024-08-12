@@ -1,11 +1,7 @@
-output "k8s_cluster_name" {
-  value = google_container_cluster.k8s_cluster.name
+output "vpc_network_name" {
+  value = google_compute_network.gke_vpc_network.name
 }
 
-output "k8s_cluster_endpoint" {
-  value = google_container_cluster.k8s_cluster.endpoint
-}
-
-output "k8s_cluster_master_version" {
-  value = google_container_cluster.k8s_cluster.master_version
+output "gke_cluster_name" {
+  value = google_container_cluster.gke_cluster.name
 }
