@@ -3,7 +3,7 @@
 # Set variables
 PROJECT_ID=devoteam-khawar
 REGION=us-central1
-CLUSTER_NAME=k8s-cluster
+CLUSTER_NAME=devoteam-khawar-gke
 TF_DIR="./terraform"
 
 # Function to check if command succeeded
